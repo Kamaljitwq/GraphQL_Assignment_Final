@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
+import InnerCard from '../../cardDesign/InnerCard'
+
 
 
 function LearnMore() {
@@ -13,8 +15,7 @@ function LearnMore() {
             <Link to ="/">Back to Home Page
             </Link>
 
-            {id}
-           
+           <InnerCard id={id} />
             
 
             

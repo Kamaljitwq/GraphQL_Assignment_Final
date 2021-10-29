@@ -19,7 +19,7 @@ const [addCar] = useMutation(ADD_CAR)
 
   const onFinish = values => {
     const { year, make, model, price, personId } = values
- 
+ console.log(typeof(year));
     addCar({
       variables: {
         id,
@@ -41,9 +41,10 @@ const [addCar] = useMutation(ADD_CAR)
           personId
         }
       },
-      update: (proxy, { data: { addCar } }) => {
-        const data = proxy.readQuery({ query: GET_CARS })
-        proxy.writeQuery({
+      update: (cache, { data: { addCar } }) => {
+        const data = cache.readQuery({ query: GET_CARS })
+        console.log(data)
+        cache.writeQuery({
           query: GET_CARS,
           data: {
             ...data,
