@@ -8,7 +8,9 @@ import UpdateCar from '../forms/UpdateCar'
 
 const getStyles = () => ({
   card: {
-    width: '200px'
+    width: '300px',
+    marginTop: "30px",
+  
   }
 })
 

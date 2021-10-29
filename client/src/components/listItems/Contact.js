@@ -11,6 +11,7 @@ const getStyles = () => ({
   card: {
     width: "500px",
     marginBottom: "100px",
+    
   },
 });
 
