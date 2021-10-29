@@ -104,10 +104,10 @@ const typeDefs = gql`
 
   type Car {
     id: String!
-    year: Int
+    year: String
     make: String
     model: String
-    price: Float
+    price: String
     personId: String
   }
 
@@ -127,8 +127,8 @@ const typeDefs = gql`
     removeContact(id: String!): Contact
   }
   type Mutation {
-    addCar(id: String!, year: Int!, make: String!, model: String!, price: Float!, personId: String!): Car
-    updateCar(id: String!, year: Int!, make: String!, model: String!, price: Float!, personId: String!): Car
+    addCar(id: String!, year: String!, make: String!, model: String!, price: String!, personId: String!): Car
+    updateCar(id: String!, year: String!, make: String!, model: String!, price: String!, personId: String!): Car
     removeCar(id: String!): Car
    }
 `
